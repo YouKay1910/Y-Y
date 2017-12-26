@@ -1465,7 +1465,10 @@ pre code {
   .col-lg-11 {
     float: left;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8d2ae4f313366ac6045eea8ad18a053f125a0308
   .col-lg-12 {
     width: 100%;
   }
@@ -7096,6 +7099,10 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> 8d2ae4f313366ac6045eea8ad18a053f125a0308
