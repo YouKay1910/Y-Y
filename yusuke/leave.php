@@ -1,4 +1,31 @@
+<?php
+	if (!isset($_POST)) {
+		// header('Location:')
+		exit();
+	}
+
+	if (!empty($_POST)) {
+		if (!isset($_POST['select'])) {
+			echo "退会理由を1つだけ選択してください";
+		}elseif (isset($_POST['select'])) {
+
+	}
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
@@ -13,9 +40,9 @@
 	<form method="POST" action="">
 		<div>
 			<ul style="display: table; padding: 0; margin: 20px auto;">
-				<li style="display: table;"><input type="checkbox" >必要ない</li>
-				<li style="display: table;"><input type="checkbox" >飽きた</li>
-				<li style="display: table;"><input type="checkbox" >モチベーションがあがらない</li>
+				<li style="display: table;"><input type="checkbox" name="select">必要ない</li>
+				<li style="display: table;"><input type="checkbox" name="select">飽きた</li>
+				<li style="display: table;"><input type="checkbox" name="select">モチベーションがあがらない</li>
 			</ul>
 		</div>
 		<div style="text-align: center;">
