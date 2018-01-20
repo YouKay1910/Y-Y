@@ -1,0 +1,30 @@
+body {
+	text-align: center;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	padding: 75px;
+}
+
+ul {
+	display: table;
+	padding: 0;
+	margin: 20px auto;
+}
+
+li {
+	display: table;
+}
+
+.opinion {
+	margin-bottom: 20px;
+}
+
+.reason {
+	width: 200px; height: 100px;
+}
+
+
