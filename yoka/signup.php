@@ -1,4 +1,4 @@
-<?php 
+<?php
 	//signup.phpで実装すること
 	//$_SESSIONというスーパーグローバルhrん数が使えるようになる
 	//おまじない、として使う場合は記載しておく
@@ -80,7 +80,7 @@ if (!empty($_POST)) {
 		$errors['password']='blank';
 	}elseif (strlen($password)<6) {
 		// strlen()関数 文字数をカウントする(半角)
-		//mb_strlen()関数　文字数をカウントする(日本語対応)(全角)
+		//mb_strlen()関数 文字数をカウントする(日本語対応)(全角)
 		// strlen('ここの文字')=>数字で文字の数になる
 		$errors['password']='length';
 	}
@@ -126,7 +126,7 @@ if (!empty($_POST)) {
 		//フォルダの書き込み権限を「読み書き」可能な状態にする！
 		move_uploaded_file($_FILES['profile_image']['tmp_name'],'../profile _image/'. $_FILES['profile_image']['name']);
 		//これで画像を保存することができる！
-		
+
 		//エラーがない場合はセッションにもデータを保存してあげる
 		$_SESSION['user_info']['username']=$username;
 		$_SESSION['user_info']['email']=$email;
@@ -134,8 +134,8 @@ if (!empty($_POST)) {
 		$_SESSION['user_info']['profile_image']=$filename;
 
 		//($_SESSIONはこのページでは定義されていないが、check.phpで定義されているからundifined valuableにならない)
-		
-		//リダイレクト　（ポスト送信を破棄してリンクを飛ばす）
+
+		//リダイレクト（ポスト送信を破棄してリンクを飛ばす）
 		header('Location: check.php');
 		exit;
 
@@ -164,7 +164,6 @@ if (!empty($_POST)) {
 	 	<div class="heading">
 	 		<h1>まずはユーザー登録をしましょう！</h1>
 	 	</div>
- 	
  	<form method="POST" action="" enctype = "multipart/form-data"> <!-- actionが空の場合、自分自身にデータが帰ってくる（今いるページに戻る、画面は変わらない） -->
  		<!-- ユーザー名のデータ -->
  		<label>ユーザー名</label><br>
@@ -173,13 +172,13 @@ if (!empty($_POST)) {
 
  		<!-- $errors['username']が存在する且つ$errorsが['username']==blankだったらエラーの文字を表示してあげる -->
 
- 		<?php if (isset($errors['username'])&&$errors['username']=='blank') 
- 			
+ 		<?php if (isset($errors['username'])&&$errors['username']=='blank')
+
  		{ ?>
  			<div class="alert alert-danger">
  				ユーザー名を入力してください
  			</div>
- 		
+
 
  		<?php } ?>
 
@@ -188,13 +187,11 @@ if (!empty($_POST)) {
  		<input type="text" name="email" placeholder="例: nex@seed" value="<?php echo $email; ?>">
  		<br>
 
- 		<?php if (isset($errors['email'])&&$errors['email']=='blank') 
- 			
- 		{ ?>
+ 		<?php if (isset($errors['email'])&&$errors['email']=='blank'){ ?>
  			<div class="alert alert-danger">
  				メールアドレスを入力してください
  			</div>
- 		
+
 
  		<?php } ?>
 
@@ -203,22 +200,17 @@ if (!empty($_POST)) {
  		<input type="password" name="password">
  		<br>
 
- 		<?php if (isset($errors['password'])&&$errors['password']=='blank') 
- 			
- 		{ ?>
+ 		<?php if (isset($errors['password'])&&$errors['password']=='blank'){ ?>
  			<div class="alert alert-danger">
  				パスワードを入力してください
  			</div>
- 		
-
  		<?php } ?>
- 		<?php if (isset($errors['password'])&&$errors['password']=='length') 
- 			
+ 		<?php if (isset($errors['password'])&&$errors['password']=='length')
  		{ ?>
  			<div class="alert alert-danger">
  				パスワードは6文字以上設定してください
  			</div>
- 		
+
 
  		<?php } ?>
 
@@ -247,6 +239,6 @@ if (!empty($_POST)) {
  	<br>
  	ログインは <a href="../login.php">こちら</a>
  	</div>
- 	
+
  </body>
  </html>

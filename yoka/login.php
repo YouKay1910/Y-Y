@@ -10,20 +10,16 @@
 	<h1>ログイン画面</h1>
 
 	<form method="POST" action="" enctype = "multipart/form-data">
-		
-		<?php if (isset($errors['login'])&&$errors['login']=='ng') 
- 			
+
+		<?php if (isset($errors['login'])&&$errors['login']=='ng')
+
  		{ ?>
  			<div class="alert alert-danger">
  				メールアドレスまたはパスワードが違います。
  			</div>
- 		
+
 
  		<?php } ?>
-
-
-
-
 	</form>
 
 </body>
